@@ -41,11 +41,11 @@ solver:
 
 dataloader:
   train_dataset:
-    target: Utils.Data_utils.battery_dataset.BatteryDataset
+    target: Utils.Data_utils.real_datasets.CustomDataset
     params:
       name: battery
-      proportion: 0.8  # Set to rate < 1 if training conditional generation
-      data_path: ./OUTPUT/battery/ddpm_fake_battery.npy
+      proportion: 1.0  # Set to rate < 1 if training conditional generation
+      root_path: ./Data/B0005/B0005_103.csv
       window: 100  # seq_length
       save2npy: True
       neg_one_to_one: True
@@ -53,11 +53,11 @@ dataloader:
       period: train
 
   test_dataset:
-    target: Utils.Data_utils.battery_dataset.BatteryDataset
+    target: Utils.Data_utils.real_datasets.CustomDataset
     params:
       name: battery
       proportion: 0.9  # rate
-      data_path: ./OUTPUT/battery/ddpm_fake_battery.npy
+      root_path: ./Data/B0005/B0005_103.csv
       window: 100  # seq_length
       save2npy: True
       neg_one_to_one: True
