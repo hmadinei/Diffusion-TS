@@ -45,7 +45,7 @@ dataloader:
     params:
       name: battery
       proportion: 1.0  # Set to rate < 1 if training conditional generation
-      root_path: ./Data/B0005/B0005_103.csv
+      data_root: ./Data/B0005/B0005_103.csv
       window: 100  # seq_length
       save2npy: True
       neg_one_to_one: True
@@ -57,7 +57,7 @@ dataloader:
     params:
       name: battery
       proportion: 0.9  # rate
-      root_path: ./Data/B0005/B0005_103.csv
+      data_root: ./Data/B0005/B0005_103.csv
       window: 100  # seq_length
       save2npy: True
       neg_one_to_one: True
