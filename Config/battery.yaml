@@ -41,7 +41,7 @@ solver:
 
 dataloader:
   train_dataset:
-    target: Utils.Data_utils.real_datasets.CustomDataset
+    target: Utils.Data_utils.battery_dataset.BatteryDataset
     params:
       name: battery
       proportion: 1.0  # Set to rate < 1 if training conditional generation
@@ -53,7 +53,7 @@ dataloader:
       period: train
 
   test_dataset:
-    target: Utils.Data_utils.real_datasets.CustomDataset
+    target: Utils.Data_utils.battery_dataset.BatteryDataset
     params:
       name: battery
       proportion: 0.9  # rate
